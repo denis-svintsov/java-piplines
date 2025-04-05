@@ -2,7 +2,8 @@ name: Run Tests on Pull Request
 
 on:
   pull_request:
-    branches: [ "*" ]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -19,5 +20,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build and run tests
-        run: ./gradlew test
+      - name: Run tests
+        run: ./gradle test
